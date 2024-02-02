@@ -339,16 +339,16 @@ export class AmplifyAuth
         }),
       ];
     }
-    if (providerSetupResult.saml) {
-      identityPool.samlProviderArns = [
-        arnBuilder({
-          service: 'iam',
-          region,
-          accountId: Stack.of(this).account,
-          resource: `saml-provider/${providerSetupResult.saml.providerName}`,
-        }),
-      ];
-    }
+    // if (providerSetupResult.saml) {
+    //   identityPool.samlProviderArns = [
+    //     arnBuilder({
+    //       service: 'iam',
+    //       region,
+    //       accountId: Stack.of(this).account,
+    //       resource: `saml-provider/${providerSetupResult.saml.providerName}`,
+    //     }),
+    //   ];
+    // }
     return {
       identityPool,
       identityPoolRoleAttachment,
